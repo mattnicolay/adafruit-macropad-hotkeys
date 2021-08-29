@@ -15,12 +15,13 @@ import terminalio
 from adafruit_display_shapes.rect import Rect
 from adafruit_display_text import label
 from adafruit_macropad import MacroPad
+from adafruit_hid.consumer_control_code import ConsumerControlCode
 
 
 # CONFIGURABLES ------------------------
 
 MACRO_FOLDER = '/macros'
-
+CC_CODES = [0xB2, 0xB3, 0xB4, 0xB5, 0xB6, 0xB7, 0xB8, 0xCD, 0xE2, 0xEA, 0xE9, 0x70, 0x6F]
 
 # CLASSES AND FUNCTIONS ----------------
 
@@ -144,9 +145,15 @@ while True:
         for item in sequence:
             if isinstance(item, int):
                 if item >= 0:
-                    macropad.keyboard.press(item)
+                    if item in CC_CODES:
+                        macropad.consumer_control.send(item)
+                    else:
+                        macropad.keyboard.press(item)
                 else:
-                    macropad.keyboard.release(-item)
+                    if -item in CC_CODES:
+                        macropad.consumer_control.release(-item)
+                    else:
+                        macropad.keyboard.release(-item)
             elif isinstance(item, float):
                 time.sleep(item)
             else:

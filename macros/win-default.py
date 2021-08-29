@@ -10,12 +10,12 @@ app = {                      # REQUIRED dict, must be named 'app'
         # COLOR    LABEL    KEY SEQUENCE
         # 1st row ----------
         (0x000000, '', []),
-        (0x000000, '', []),
+        (0x004000, 'TskMan', [Keycode.CONTROL, Keycode.SHIFT, Keycode.ESCAPE]),
         (0x000000, '', []),
         # 2nd row ----------
-        (0x120026, 'Scrnsht', [Keycode.PRINT_SCREEN]),
-        (0x120026, 'Close', [Keycode.ALT, Keycode.F4]),
-        (0x120026, 'Desktop', [Keycode.WINDOWS, 'D']),
+        (0x120026, 'Scrnsht', [Keycode.COMMAND, Keycode.PRINT_SCREEN]),
+        (0x120026, 'Close', [Keycode.RIGHT_ALT, Keycode.F4]),
+        (0x120026, 'Desktop', [Keycode.COMMAND, Keycode.D]),
         # 3rd row ----------
         (0x004000, 'Mute', [ConsumerControlCode.MUTE]),
         (0x004000, 'Vol Down', [ConsumerControlCode.VOLUME_DECREMENT]),
