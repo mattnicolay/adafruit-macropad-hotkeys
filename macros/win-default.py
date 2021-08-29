@@ -9,22 +9,22 @@ app = {                      # REQUIRED dict, must be named 'app'
     'macros' : [             # List of button macros...
         # COLOR    LABEL    KEY SEQUENCE
         # 1st row ----------
-        (0x018FC2, 'Scrnsht', [Keycode.PRINT_SCREEN]),
-        (0x018FC2, 'Left', [Keycode.CONTROL, Keycode.LEFT_ARROW]),
-        (0x018FC2, 'Right', [Keycode.CONTROL, Keycode.RIGHT_ARROW]),
+        (0x000000, '', []),
+        (0x000000, '', []),
+        (0x000000, '', []),
         # 2nd row ----------
-        (0x0829C2, 'Emoji', [Keycode.CONTROL, Keycode.COMMAND, ' ']),
-        (0x0829C2, 'Brt Dn', [ConsumerControlCode.BRIGHTNESS_DECREMENT]),
-        (0x0829C2, 'Brt Up', [ConsumerControlCode.BRIGHTNESS_INCREMENT]),
+        (0x120026, 'Scrnsht', [Keycode.PRINT_SCREEN]),
+        (0x120026, 'Close', [Keycode.ALT, Keycode.F4]),
+        (0x120026, 'Desktop', [Keycode.WINDOWS, 'D']),
         # 3rd row ----------
-        (0xAB029A, 'Mute', [ConsumerControlCode.MUTE]),
-        (0xAB029A, 'Vol Down', [ConsumerControlCode.VOLUME_DECREMENT]),
-        (0xAB029A, 'Vol Up', [ConsumerControlCode.VOLUME_INCREMENT]),
+        (0x004000, 'Mute', [ConsumerControlCode.MUTE]),
+        (0x004000, 'Vol Down', [ConsumerControlCode.VOLUME_DECREMENT]),
+        (0x004000, 'Vol Up', [ConsumerControlCode.VOLUME_INCREMENT]),
         # 4th row ----------
-        (0x4D00AB, 'Prev', [ConsumerControlCode.SCAN_PREVIOUS_TRACK ]),
-        (0x4D00AB, 'Pause', [ConsumerControlCode.PLAY_PAUSE]),
-        (0x4D00AB, 'Next', [ConsumerControlCode.SCAN_NEXT_TRACK]),
+        (0x120026, 'Prev', [ConsumerControlCode.SCAN_PREVIOUS_TRACK ]),
+        (0x120026, 'Pause', [ConsumerControlCode.PLAY_PAUSE]),
+        (0x120026, 'Next', [ConsumerControlCode.SCAN_NEXT_TRACK]),
         # Encoder button ---
-        (0x000000, '', [Keycode.CONTROL, Keycode.UP_ARROW]) # Close window/tab
+        (0x000000, '', [Keycode.WINDOWS, Keycode.TAB])
     ]
 }
