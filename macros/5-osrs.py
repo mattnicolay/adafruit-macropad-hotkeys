@@ -12,8 +12,8 @@ app = {                    # REQUIRED dict, must be named 'app'
         (0x260008, '3', [Keycode.THREE]),
         # 2nd row ----------
         (0x26000d, 'Atk', [Keycode.F1]),
-        (0x260017, 'Magic', [Keycode.F6]),
-        (0x260008, 'Skl', [Keycode.F2]),
+        (0x260017, 'Equp', [Keycode.F4]),
+        (0x260008, 'Magic', [Keycode.F6]),
         # 3rd row ----------
         (0x260021, 'Inv', [Keycode.ESCAPE]),
         (0x26000d, 'UP', [Keycode.UP_ARROW]),
